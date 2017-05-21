@@ -42,7 +42,6 @@
                 <value>classpath:mapper/*.xml</value>
             </array>
         </property>
-        <property name="typeAliasesPackage" value="net.topflow.dao.model"/>
     </bean>
 
     <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
