@@ -1,0 +1,47 @@
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!-- 详细配置参见mbg官网 www.mybatis.org/generator 和 tkmybatis官网 mybatis.tk -->
+<generatorConfiguration>
+
+    <!-- id 只要唯一就行，这里context可以多个，用来区分的，报错时有id提示是哪个context的错误 -->
+    <!-- targetRuntime 默认是MyBatis3,其他的有Mybatis3Simple(Mybatis3的简版),Mybatis3DynamicSql(mbg 3.4.2以上版本使用,支持jdk1.8) -->
+    <!-- MyBatis3会生成Example对象，XML中会生成很多默认方法，MyBaits3Simple没有生成Example对象，简版，动态SQL的就不用看了生成了很多东西 -->
+    <!-- defaultModelType 默认conditional,其他的flat , hierarchical -->
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <property name="useMapperCommentGenerator" value="true"/><!-- 使用tkmybatis的通过mapper注释生成工具 -->
+
+        <!-- tkmybatis插件，用于给所有生成的mapper借口都继承tkmybais的通用mapper接口 -->
+        <!-- 注释掉该插件生成的就是原生MyBatis的，用来插件生成出来的是tkMybatis注解风格的 -->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/><!-- 生成的Mapper接口会自动继承这个接口 -->
+            <property name="caseSensitive" value="true"/><!-- 如果数据库区分大小写，这里要配置True,否则注解中的表名小写时会找不到表 -->
+            <property name="forceAnnotation" value="true"/><!-- 是否强制生成注解 -->
+            <!-- 字段、表名的开始结束分隔符，对关键字的情况适用 -->
+            <!--<property name="beginningDelimiter" value="`"/>-->
+            <!--<property name="endingDelimiter" value="`"/>-->
+        </plugin>
+
+        <!-- 数据库连接配置 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://master:3306/mydb"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- model 生成配置规则-->
+        <javaModelGenerator targetPackage="com.example.dao.model" targetProject="mybatis-generator/src/main/java"/>
+
+        <!-- xml 生成配置规则 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="mybatis-generator/src/main/resources" />
+
+        <!-- mapper interface 生成配置规则 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao.mapper" targetProject="mybatis-generator/src/main/java" />
+
+        <!-- 需要生成的表，注意如果有主键自增，或者主键通过序列生成的，要配置 generatedKey -->
+        <table tableName="Blog"/>
+
+    </context>
+</generatorConfiguration>
