@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.mapper.MidpOrderItemMapper">
+  <resultMap id="BaseResultMap" type="com.example.dao.model.MidpOrderItem">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ID" jdbcType="BIGINT" property="id" />
+    <result column="MEMBER_ID" jdbcType="BIGINT" property="memberId" />
+    <result column="ORDER_NO" jdbcType="BIGINT" property="orderNo" />
+    <result column="ORDER_ITEM_NO" jdbcType="INTEGER" property="orderItemNo" />
+    <result column="PRODUCT_ID" jdbcType="BIGINT" property="productId" />
+    <result column="SKU_ID" jdbcType="BIGINT" property="skuId" />
+    <result column="SKU_NAME" jdbcType="NVARCHAR" property="skuName" />
+    <result column="SKU_PROPERTY" jdbcType="NVARCHAR" property="skuProperty" />
+    <result column="SKU_IMAGE" jdbcType="NVARCHAR" property="skuImage" />
+    <result column="ITEM_CODE" jdbcType="NVARCHAR" property="itemCode" />
+    <result column="BARCODE" jdbcType="NVARCHAR" property="barcode" />
+    <result column="MARKET_PRICE" jdbcType="DECIMAL" property="marketPrice" />
+    <result column="SALE_QTY" jdbcType="DECIMAL" property="saleQty" />
+    <result column="SALE_PRICE" jdbcType="DECIMAL" property="salePrice" />
+    <result column="PROMO_PRICE" jdbcType="DECIMAL" property="promoPrice" />
+    <result column="PROMO_DISCOUNT" jdbcType="DECIMAL" property="promoDiscount" />
+    <result column="COUPON_DISCOUNT" jdbcType="DECIMAL" property="couponDiscount" />
+    <result column="PAY_AMOUNT" jdbcType="DECIMAL" property="payAmount" />
+    <result column="COUPON_AMOUNT" jdbcType="DECIMAL" property="couponAmount" />
+    <result column="POINT_AMOUNT" jdbcType="DECIMAL" property="pointAmount" />
+    <result column="PAY_DISCOUNT" jdbcType="DECIMAL" property="payDiscount" />
+    <result column="MERCHANT_DISCOUNT" jdbcType="DECIMAL" property="merchantDiscount" />
+    <result column="GIVE_POINT" jdbcType="DECIMAL" property="givePoint" />
+    <result column="WEIGHT" jdbcType="DECIMAL" property="weight" />
+    <result column="SALE_UNIT" jdbcType="NVARCHAR" property="saleUnit" />
+    <result column="ITEM_TYPE" jdbcType="TINYINT" property="itemType" />
+    <result column="SALE_TYPE" jdbcType="TINYINT" property="saleType" />
+    <result column="ERP_CATEGORY" jdbcType="NVARCHAR" property="erpCategory" />
+    <result column="SELLER_NO" jdbcType="NVARCHAR" property="sellerNo" />
+    <result column="CREATED_AT" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="UPDATED_AT" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="TIPS" jdbcType="NVARCHAR" property="tips" />
+    <result column="INSERT_TIME" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="SOURCE_DB" jdbcType="VARCHAR" property="sourceDb" />
+  </resultMap>
+</mapper>

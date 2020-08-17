@@ -1,10 +1,14 @@
 spring:
   datasource:
     druid:
-      driver-class-name: com.mysql.jdbc.Driver
-      url: jdbc:mysql://master:3306/mydb
-      username: root
-      password: root
+#      driver-class-name: com.mysql.jdbc.Driver
+#      url: jdbc:mysql://master:3306/mydb
+#      username: root
+#      password: root
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+      url: jdbc:sqlserver://datp-prd-pas-e2-sqldw001.database.chinacloudapi.cn:1433;database=datp-prd-pas-e2-sqldw001;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.chinacloudapi.cn;loginTimeout=30;
+      username: midpdbadmin@datp-prd-pas-e2-sqldw001
+      password: pn/ChLewuRatMM0TSHDG
 mybatis:
   base-packages: com.exmample.dao
   type-aliases-package: com.example.dao

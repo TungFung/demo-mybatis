@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.mapper.MidpOrderSaleMapper">
+  <resultMap id="BaseResultMap" type="com.example.dao.model.MidpOrderSale">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="ID" jdbcType="BIGINT" property="id" />
+    <result column="MEMBER_ID" jdbcType="BIGINT" property="memberId" />
+    <result column="BATCH_NO" jdbcType="BIGINT" property="batchNo" />
+    <result column="ORDER_NO" jdbcType="BIGINT" property="orderNo" />
+    <result column="ORDER_TYPE" jdbcType="TINYINT" property="orderType" />
+    <result column="SALE_CHANNEL" jdbcType="TINYINT" property="saleChannel" />
+    <result column="ORDER_STATUS" jdbcType="SMALLINT" property="orderStatus" />
+    <result column="SUB_STATUS" jdbcType="TINYINT" property="subStatus" />
+    <result column="RETURN_STATUS" jdbcType="TINYINT" property="returnStatus" />
+    <result column="PAY_STATUS" jdbcType="TINYINT" property="payStatus" />
+    <result column="LOGISTICS_STATUS" jdbcType="SMALLINT" property="logisticsStatus" />
+    <result column="TOTAL_PRODUCT_PRICE" jdbcType="DECIMAL" property="totalProductPrice" />
+    <result column="TOTAL_PROMO_DISCOUNT" jdbcType="DECIMAL" property="totalPromoDiscount" />
+    <result column="TOTAL_COUPON_DISCOUNT" jdbcType="DECIMAL" property="totalCouponDiscount" />
+    <result column="FREIGHT" jdbcType="DECIMAL" property="freight" />
+    <result column="FREIGHT_DISCOUNT" jdbcType="DECIMAL" property="freightDiscount" />
+    <result column="TOTAL_PAY_AMOUNT" jdbcType="DECIMAL" property="totalPayAmount" />
+    <result column="TOTAL_COUPON_AMOUNT" jdbcType="DECIMAL" property="totalCouponAmount" />
+    <result column="TOTAL_POINT_AMOUNT" jdbcType="DECIMAL" property="totalPointAmount" />
+    <result column="TOTAL_USE_POINT" jdbcType="DECIMAL" property="totalUsePoint" />
+    <result column="REAL_PAY_AMOUNT" jdbcType="DECIMAL" property="realPayAmount" />
+    <result column="TOTAL_GIVE_POINT" jdbcType="DECIMAL" property="totalGivePoint" />
+    <result column="TOTAL_AMOUNT" jdbcType="DECIMAL" property="totalAmount" />
+    <result column="ORDER_TIME" jdbcType="TIMESTAMP" property="orderTime" />
+    <result column="PAY_TIME" jdbcType="TIMESTAMP" property="payTime" />
+    <result column="FINISH_TIME" jdbcType="TIMESTAMP" property="finishTime" />
+    <result column="AUDIT_TIME" jdbcType="TIMESTAMP" property="auditTime" />
+    <result column="AUDITOR" jdbcType="VARCHAR" property="auditor" />
+    <result column="REGION_CODE" jdbcType="VARCHAR" property="regionCode" />
+    <result column="CORPORATION_CODE" jdbcType="VARCHAR" property="corporationCode" />
+    <result column="CORPORATION_NAME" jdbcType="VARCHAR" property="corporationName" />
+    <result column="STORE_CODE" jdbcType="VARCHAR" property="storeCode" />
+    <result column="STORE_NAME" jdbcType="VARCHAR" property="storeName" />
+    <result column="INVOICE_TYPE" jdbcType="TINYINT" property="invoiceType" />
+    <result column="INVOICE_STATUS" jdbcType="TINYINT" property="invoiceStatus" />
+    <result column="VIRTUAL_MEMBER" jdbcType="TINYINT" property="virtualMember" />
+    <result column="SENT_YELLOW_RECEIPT" jdbcType="TINYINT" property="sentYellowReceipt" />
+    <result column="DELETED" jdbcType="TINYINT" property="deleted" />
+    <result column="VERSION" jdbcType="INTEGER" property="version" />
+    <result column="CREATED_AT" jdbcType="TIMESTAMP" property="createdAt" />
+    <result column="UPDATED_AT" jdbcType="TIMESTAMP" property="updatedAt" />
+    <result column="INSERT_TIME" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="SOURCE_DB" jdbcType="VARCHAR" property="sourceDb" />
+  </resultMap>
+</mapper>
