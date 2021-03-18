@@ -25,29 +25,32 @@
         </plugin>
 
         <!-- 数据库连接配置 -->
-<!--        <jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
-<!--                        connectionURL="jdbc:mysql://master:3306/mydb"-->
-<!--                        userId="root"-->
-<!--                        password="root">-->
-<!--        </jdbcConnection>-->
         <jdbcConnection driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
                         connectionURL="jdbc:sqlserver://datp-prd-pas-e2-sqldw001.database.chinacloudapi.cn:1433;database=datp-prd-pas-e2-sqldw001;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.chinacloudapi.cn;loginTimeout=30;"
-                        userId="midpdbadmin@datp-prd-pas-e2-sqldw001"
-                        password="pn/ChLewuRatMM0TSHDG">
+                        userId="smallrcuser"
+                        password="root@1234">
         </jdbcConnection>
+<!--        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"-->
+<!--                        connectionURL="jdbc:mysql://midp-ver-pas-e2-mysql001.mysql.database.chinacloudapi.cn:3306/order_gatherdb?useSSL=true&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true&amp;autoReconnect=true"-->
+<!--                        userId="order_gatherdb@midp-ver-pas-e2-mysql001"-->
+<!--                        password="pNpy4cOmpPIDyFGR">-->
+<!--        </jdbcConnection>-->
+<!--        <jdbcConnection driverClass="ru.yandex.clickhouse.ClickHouseDriver"-->
+<!--                        connectionURL="jdbc:clickhouse://10.10.102.143:8123/marketdw"-->
+<!--                        userId="default"-->
+<!--                        password="kXtRrpq6">-->
+<!--        </jdbcConnection>-->
 
         <!-- model 生成配置规则-->
-        <javaModelGenerator targetPackage="com.example.dao.model" targetProject="mybatis-generator/src/main/java"/>
+        <javaModelGenerator targetPackage="com.aeonbuy.rdes.dao.model" targetProject="mybatis-generator/src/main/java"/>
 
         <!-- xml 生成配置规则 -->
         <sqlMapGenerator targetPackage="mapper" targetProject="mybatis-generator/src/main/resources" />
 
         <!-- mapper interface 生成配置规则 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.dao.mapper" targetProject="mybatis-generator/src/main/java" />
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.aeonbuy.rdes.dao.mapper" targetProject="mybatis-generator/src/main/java" />
 
         <!-- 需要生成的表，注意如果有主键自增，或者主键通过序列生成的，要配置 generatedKey -->
-        <!--<table tableName="Blog"/>-->
-        <table schema="DS" tableName="MIDP_ORDER_SALE"/>
-        <table schema="DS" tableName="MIDP_ORDER_ITEM"/>
+        <table schema="DW" tableName="DIM_ITEMMST"/>
     </context>
 </generatorConfiguration>
